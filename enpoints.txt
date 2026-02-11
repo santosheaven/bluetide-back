@@ -1,0 +1,195 @@
+### Base URL
+# Replace host/port if needed
+@baseUrl = http://localhost:8080
+
+### Users
+GET {{baseUrl}}/api/users
+GET {{baseUrl}}/api/users/{id}
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "email":"owner@example.com",
+  "displayName":"Owner",
+  "role":"owner",
+  "companyId":null,
+  "ownedPropertyIds":[]
+}
+
+PUT {{baseUrl}}/api/users/{id}
+Content-Type: application/json
+
+{
+  "email":"owner2@example.com",
+  "displayName":"Owner 2",
+  "role":"owner"
+}
+
+DELETE {{baseUrl}}/api/users/{id}
+
+### Companies
+GET {{baseUrl}}/api/companies
+GET {{baseUrl}}/api/companies/{id}
+POST {{baseUrl}}/api/companies
+Content-Type: application/json
+
+{
+  "name":"Acme Ltd",
+  "managerIds":[]
+}
+
+PUT {{baseUrl}}/api/companies/{id}
+Content-Type: application/json
+
+{
+  "name":"Acme Updated",
+  "managerIds":[]
+}
+
+DELETE {{baseUrl}}/api/companies/{id}
+
+### Properties
+GET {{baseUrl}}/api/properties
+GET {{baseUrl}}/api/properties/{id}
+POST {{baseUrl}}/api/properties
+Content-Type: application/json
+
+{
+  "address":"123 Main St",
+  "type":"house",
+  "environments":3,
+  "floors":1,
+  "hasPool":false,
+  "parkingSpots":1,
+  "ownerId":"uid_1",
+  "managerId":"mgr_1"
+}
+
+PUT {{baseUrl}}/api/properties/{id}
+Content-Type: application/json
+
+{
+  "address":"123 Main St Updated",
+  "type":"apartment"
+}
+
+DELETE {{baseUrl}}/api/properties/{id}
+
+### Inventory
+GET {{baseUrl}}/api/inventory
+GET {{baseUrl}}/api/inventory/{id}
+POST {{baseUrl}}/api/inventory
+Content-Type: application/json
+
+{
+  "propertyId":"prop_1",
+  "name":"Fridge",
+  "brand":"BrandX",
+  "model":"X100",
+  "state":"good",
+  "photos":[]
+}
+
+PUT {{baseUrl}}/api/inventory/{id}
+Content-Type: application/json
+
+{
+  "propertyId":"prop_1",
+  "name":"Fridge Updated"
+}
+
+DELETE {{baseUrl}}/api/inventory/{id}
+
+### Maintenance
+GET {{baseUrl}}/api/maintenance
+GET {{baseUrl}}/api/maintenance/{id}
+POST {{baseUrl}}/api/maintenance
+Content-Type: application/json
+
+{
+  "inventoryId":"inv_1",
+  "date":"2025-01-01T00:00:00Z",
+  "description":"Check filter",
+  "frequency":"monthly",
+  "isCompleted":false
+}
+
+PUT {{baseUrl}}/api/maintenance/{id}
+Content-Type: application/json
+
+{
+  "description":"Updated check",
+  "isCompleted":true
+}
+
+DELETE {{baseUrl}}/api/maintenance/{id}
+
+### Services
+GET {{baseUrl}}/api/services
+GET {{baseUrl}}/api/services/{id}
+POST {{baseUrl}}/api/services
+Content-Type: application/json
+
+{
+  "propertyId":"prop_1",
+  "requesterId":"uid_1",
+  "serviceType":"plumbing",
+  "description":"Leaky faucet",
+  "status":"open"
+}
+
+PUT {{baseUrl}}/api/services/{id}
+Content-Type: application/json
+
+{
+  "status":"completed"
+}
+
+DELETE {{baseUrl}}/api/services/{id}
+
+### Invoices
+GET {{baseUrl}}/api/invoices
+GET {{baseUrl}}/api/invoices/{id}
+POST {{baseUrl}}/api/invoices
+Content-Type: application/json
+
+{
+  "propertyId":"prop_1",
+  "relatedEntityId":"srv_1",
+  "serviceType":"plumbing",
+  "amount":150.0,
+  "paymentDate":"2025-01-02T00:00:00Z",
+  "invoiceUrl":"https://example.com/invoice.pdf"
+}
+
+PUT {{baseUrl}}/api/invoices/{id}
+Content-Type: application/json
+
+{
+  "amount":200.0
+}
+
+DELETE {{baseUrl}}/api/invoices/{id}
+
+### Notifications
+GET {{baseUrl}}/api/notifications
+GET {{baseUrl}}/api/notifications/{id}
+POST {{baseUrl}}/api/notifications
+Content-Type: application/json
+
+{
+  "userId":"uid_1",
+  "type":"info",
+  "relatedEntityId":"srv_1",
+  "message":"Service created",
+  "read":false
+}
+
+PUT {{baseUrl}}/api/notifications/{id}
+Content-Type: application/json
+
+{
+  "read":true
+}
+
+DELETE {{baseUrl}}/api/notifications/{id}

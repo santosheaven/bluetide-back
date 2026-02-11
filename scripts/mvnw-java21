@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Run this project's maven with Java 21 without modifying global env vars.
+# It tries common Homebrew install locations; fallback to system if not found.
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+MVNW="$ROOT_DIR/mvnw"
+MVN="mvn"
+
+# possible Homebrew paths
+CANDIDATES=(
+  "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
+  "/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
+  "/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
+)
+
+JAVA_HOME_FOUND=""
+for p in "${CANDIDATES[@]}"; do
+  if [ -x "$p/bin/java" ]; then
+    JAVA_HOME_FOUND="$p"
+    break
+  fi
+done
+
+if [ -n "$JAVA_HOME_FOUND" ]; then
+  echo "Using JAVA_HOME=$JAVA_HOME_FOUND"
+  export JAVA_HOME="$JAVA_HOME_FOUND"
+else
+  echo "Warning: Java 21 not found in common locations. Falling back to system java."
+fi
+
+# If the mvnw exists but the wrapper files are missing, prefer system mvn to avoid wrapper error
+if [ -x "$MVNW" ]; then
+  if [ ! -f "$ROOT_DIR/.mvn/wrapper/maven-wrapper.properties" ]; then
+    echo "Maven wrapper properties missing; using system 'mvn' instead of ./mvnw"
+    exec "$MVN" "$@"
+  else
+    exec "$MVNW" "$@"
+  fi
+else
+  exec "$MVN" "$@"
+fi
+

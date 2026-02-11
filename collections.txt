@@ -1,0 +1,79 @@
+Modelo de Colecciones
+A continuación, se propone una estructura de colecciones y documentos para almacenar los datos de la aplicación. MongoDB es una base de datos NoSQL, por lo que usaremos colecciones para cada entidad principal, y cada documento dentro de ellas tendrá campos que representarán las propiedades de esa entidad.
+Colección: users
+Almacena la información de todos los usuarios (gestores y dueños).
+ID del Documento: userId (proporcionado por Firebase Auth)
+Campos:
+email (string)
+displayName (string)
+role (string - ej. 'gestor', 'dueno', 'admin')
+companyId (string - Referencia a la colección companies. Solo para gestores)
+ownedPropertyIds (array de strings - Referencia a la colección properties. Solo para dueños)
+Colección: companies
+Contiene la información de las empresas de gestión de propiedades.
+ID del Documento: companyId (generado automáticamente)
+Campos:
+name (string - ej. 'Blue Tide')
+managerIds (array de strings - Referencia a la colección users)
+Colección: properties
+Guarda los detalles de cada propiedad.
+ID del Documento: propertyId (generado automáticamente)
+Campos:
+address (string)
+type (string - ej. 'Condo', 'Casa')
+environments (number)
+floors (number)
+hasPool (boolean)
+parkingSpots (number)
+ownerId (string - Referencia a la colección users)
+managerId (string - Referencia a la colección users)
+lastMaintenance (timestamp - Fecha del último mantenimiento general)
+Colección: inventory
+Almacena los detalles de cada mueble o ítem dentro de una propiedad.
+ID del Documento: inventoryId (generado automáticamente)
+Campos:
+propertyId (string - Referencia a la colección properties)
+name (string - ej. 'Sofá')
+brand (string)
+model (string)
+state (string - ej. 'Nuevo', 'Usado', 'Daño leve')
+photos (array de strings - URLs de las imágenes almacenadas en Firebase Storage)
+Colección: maintenance
+Guarda el cronograma de mantenimientos por ítem de inventario.
+ID del Documento: maintenanceId (generado automáticamente)
+Campos:
+inventoryId (string - Referencia a la colección inventory)
+date (timestamp)
+description (string - ej. 'Limpieza profunda del sofá')
+frequency (string - ej. 'Mensual', 'Cada 6 meses', 'Anual'). Se usa para aparatos electrónicos.
+isCompleted (boolean)
+Colección: services
+Registra las solicitudes de servicio.
+ID del Documento: serviceId (generado automáticamente)
+Campos:
+propertyId (string - Referencia a la colección properties)
+requesterId (string - Referencia a la colección users)
+serviceType (string - ej. 'Fontanería', 'Electricidad')
+description (string)
+status (string - ej. 'Pendiente', 'En Proceso', 'Completado')
+createdAt (timestamp)
+Colección: invoices
+Almacena los registros de pagos de servicios (luz, agua).
+ID del Documento: invoiceId (generado automáticamente)
+Campos:
+propertyId (string - Referencia a la colección properties)
+relatedEntityId (string - ID del servicio o mantenimiento relacionado)
+serviceType (string - ej. 'Luz', 'Agua')
+amount (number)
+paymentDate (timestamp)
+invoiceUrl (string - URL del recibo escaneado en Firebase Storage, opcional)
+Colección: notifications
+Se usa para el envío y registro de notificaciones.
+ID del Documento: notificationId (generado automáticamente)
+Campos:
+userId (string - Referencia a la colección users)
+type (string - ej. 'maintenance_reminder', 'service_status_update')
+relatedEntityId (string - ID del servicio o mantenimiento relacionado)
+message (string)
+read (boolean - para saber si el usuario la vio)
+createdAt (timestamp)
