@@ -1,0 +1,59 @@
++ '[' -z '' ']'
++ '[' -f /opt/homebrew/etc/mavenrc ']'
++ '[' -f /etc/mavenrc ']'
++ '[' -f /Users/isantospro/.mavenrc ']'
++ cygwin=false
++ mingw=false
++ case "`uname`" in
+++ uname
++ PRG=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/mvn
++ '[' -h /opt/homebrew/Cellar/maven/3.9.12/libexec/bin/mvn ']'
+++ pwd
++ saveddir=/Users/isantospro/dev/bluetide-back
+++ dirname /opt/homebrew/Cellar/maven/3.9.12/libexec/bin/mvn
++ MAVEN_HOME=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/..
+++ cd /opt/homebrew/Cellar/maven/3.9.12/libexec/bin/..
+++ pwd
++ MAVEN_HOME=/opt/homebrew/Cellar/maven/3.9.12/libexec
++ cd /Users/isantospro/dev/bluetide-back
++ false
++ false
++ '[' -z /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home ']'
++ JAVACMD=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java
++ '[' '!' -x /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java ']'
+++ echo /opt/homebrew/Cellar/maven/3.9.12/libexec/boot/plexus-classworlds-2.9.0.jar
++ CLASSWORLDS_JAR=/opt/homebrew/Cellar/maven/3.9.12/libexec/boot/plexus-classworlds-2.9.0.jar
++ CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
++ false
+++ find_maven_basedir -v
++++ find_file_argument_basedir -v
+++++ pwd
++++ basedir=/Users/isantospro/dev/bluetide-back
++++ found_file_switch=0
++++ for arg in '"$@"'
++++ '[' 0 -eq 1 ']'
++++ '[' -v = -f -o -v = --file ']'
++++ echo /Users/isantospro/dev/bluetide-back
+++ basedir=/Users/isantospro/dev/bluetide-back
+++ wdir=/Users/isantospro/dev/bluetide-back
+++ :
+++ '[' -d /Users/isantospro/dev/bluetide-back/.mvn ']'
+++ basedir=/Users/isantospro/dev/bluetide-back
+++ break
+++ echo /Users/isantospro/dev/bluetide-back
++ MAVEN_PROJECTBASEDIR=/Users/isantospro/dev/bluetide-back
+++ concat_lines /Users/isantospro/dev/bluetide-back/.mvn/jvm.config
+++ '[' -f /Users/isantospro/dev/bluetide-back/.mvn/jvm.config ']'
++++ tr -s '\r\n' '  '
+++ echo '# Use Java 21 for this project # This file is automatically read by mvnw '
++ MAVEN_OPTS='# Use Java 21 for this project # This file is automatically read by mvnw  '
++ false
++ export MAVEN_PROJECTBASEDIR
++ MAVEN_CMD_LINE_ARGS=' -v'
++ export MAVEN_CMD_LINE_ARGS
++ /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java --enable-native-access=ALL-UNNAMED -version
++ MAVEN_OPTS='--enable-native-access=ALL-UNNAMED # Use Java 21 for this project # This file is automatically read by mvnw  '
++ false
++ exec /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java --enable-native-access=ALL-UNNAMED '#' Use Java 21 for this project '#' This file is automatically read by mvnw -classpath /opt/homebrew/Cellar/maven/3.9.12/libexec/boot/plexus-classworlds-2.9.0.jar -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/isantospro/dev/bluetide-back org.codehaus.plexus.classworlds.launcher.Launcher -v
+Error: Could not find or load main class #
+Caused by: java.lang.ClassNotFoundException: #

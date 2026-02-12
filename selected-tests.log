@@ -1,0 +1,483 @@
+Using JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.bluetide:services >------------------------
+[INFO] Building services 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ services ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ services ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ services ---
+[INFO] skip non existing resourceDirectory /Users/isantospro/dev/bluetide-back/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ services ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [debug parameters release 21] to target/test-classes
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[35,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[35,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[35,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[35,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/CompanyControllerTest.java:[35,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[33,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[33,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[33,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[33,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[33,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[36,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[36,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[36,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[36,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InventoryControllerTest.java:[36,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/InvoiceControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/MaintenanceControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[27,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[31,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[31,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[31,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[31,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/NotificationControllerTest.java:[31,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[30,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/PropertyControllerTest.java:[32,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[28,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[WARNING] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java:[29,6] org.springframework.boot.test.mock.mockito.MockBean in org.springframework.boot.test.mock.mockito has been deprecated and marked for removal
+[INFO] /Users/isantospro/dev/bluetide-back/src/test/java/com/bluetide/services/controller/ServiceRequestControllerTest.java: Some input files additionally use or override a deprecated API that is marked for removal.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ services ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.bluetide.services.controller.InventoryControllerTest
+17:09:32.531 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.bluetide.services.controller.InventoryControllerTest]: InventoryControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:09:32.595 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.InventoryControllerTest
+17:09:32.682 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:09:32.803-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.c.InventoryControllerTest          : Starting InventoryControllerTest using Java 21.0.10 with PID 59433 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:09:32.803-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.c.InventoryControllerTest          : No active profile set, falling back to 1 default profile: "default"
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/isantospro/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-02-11T17:09:33.853-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:09:33.853-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:09:33.854-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-02-11T17:09:33.864-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.c.InventoryControllerTest          : Started InventoryControllerTest in 1.187 seconds (process running for 1.651)
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.515 s -- in com.bluetide.services.controller.InventoryControllerTest
+[INFO] Running com.bluetide.services.controller.NotificationControllerTest
+2026-02-11T17:09:33.972-06:00  INFO 59433 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.NotificationControllerTest]: NotificationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:09:33.976-06:00  INFO 59433 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.NotificationControllerTest
+2026-02-11T17:09:33.978-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:09:33.988-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.c.NotificationControllerTest       : Starting NotificationControllerTest using Java 21.0.10 with PID 59433 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:09:33.988-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.c.NotificationControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:09:34.155-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:09:34.155-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:09:34.155-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:09:34.159-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.c.NotificationControllerTest       : Started NotificationControllerTest in 0.182 seconds (process running for 1.945)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/notifications/n1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {SPRING_SECURITY_SAVED_REQUEST=DefaultSavedRequest [http://localhost/api/notifications/n1?continue]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = Unauthorized
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", WWW-Authenticate:"Basic realm="Realm"", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/notifications
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"112"]
+             Body = {"id":null,"userId":null,"type":null,"relatedEntityId":null,"message":"m","read":null,"createdAt":1770851374172}
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@2d1f3639}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Forbidden
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/notifications
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {SPRING_SECURITY_SAVED_REQUEST=DefaultSavedRequest [http://localhost/api/notifications?continue]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = Unauthorized
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", WWW-Authenticate:"Basic realm="Realm"", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /api/notifications/n1
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@453439e}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Forbidden
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/notifications/n1
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"104"]
+             Body = {"id":"n1","userId":null,"type":null,"relatedEntityId":null,"message":null,"read":true,"createdAt":null}
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@680937c9}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Forbidden
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[ERROR] Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.217 s <<< FAILURE! -- in com.bluetide.services.controller.NotificationControllerTest
+[ERROR] com.bluetide.services.controller.NotificationControllerTest.getByIdFound -- Time elapsed: 0.010 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.bluetide.services.controller.NotificationControllerTest.getByIdFound(NotificationControllerTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bluetide.services.controller.NotificationControllerTest.create -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<403>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.bluetide.services.controller.NotificationControllerTest.create(NotificationControllerTest.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bluetide.services.controller.NotificationControllerTest.getAll -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.bluetide.services.controller.NotificationControllerTest.getAll(NotificationControllerTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bluetide.services.controller.NotificationControllerTest.deleteFound -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<403>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.bluetide.services.controller.NotificationControllerTest.deleteFound(NotificationControllerTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.bluetide.services.controller.NotificationControllerTest.updateFound -- Time elapsed: 0.003 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<403>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.bluetide.services.controller.NotificationControllerTest.updateFound(NotificationControllerTest.java:68)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running com.bluetide.services.controller.InvoiceControllerTest
+2026-02-11T17:09:34.189-06:00  INFO 59433 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.InvoiceControllerTest]: InvoiceControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:09:34.192-06:00  INFO 59433 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.InvoiceControllerTest
+2026-02-11T17:09:34.193-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:09:34.201-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.controller.InvoiceControllerTest   : Starting InvoiceControllerTest using Java 21.0.10 with PID 59433 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:09:34.201-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.controller.InvoiceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:09:34.308-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:09:34.308-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:09:34.309-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-02-11T17:09:34.312-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.controller.InvoiceControllerTest   : Started InvoiceControllerTest in 0.119 seconds (process running for 2.098)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.149 s -- in com.bluetide.services.controller.InvoiceControllerTest
+[INFO] Running com.bluetide.services.controller.PropertyControllerTest
+2026-02-11T17:09:34.339-06:00  INFO 59433 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.PropertyControllerTest]: PropertyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:09:34.341-06:00  INFO 59433 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.PropertyControllerTest
+2026-02-11T17:09:34.342-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:09:34.348-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.controller.PropertyControllerTest  : Starting PropertyControllerTest using Java 21.0.10 with PID 59433 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:09:34.348-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.controller.PropertyControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:09:34.443-06:00  INFO 59433 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:09:34.443-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:09:34.443-06:00  INFO 59433 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:09:34.446-06:00  INFO 59433 --- [bluetide] [           main] c.b.s.controller.PropertyControllerTest  : Started PropertyControllerTest in 0.103 seconds (process running for 2.232)
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 s -- in com.bluetide.services.controller.PropertyControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   NotificationControllerTest.create:57 Status expected:<200> but was:<403>
+[ERROR]   NotificationControllerTest.deleteFound:76 Status expected:<204> but was:<403>
+[ERROR]   NotificationControllerTest.getAll:39 Status expected:<200> but was:<401>
+[ERROR]   NotificationControllerTest.getByIdFound:47 Status expected:<200> but was:<401>
+[ERROR]   NotificationControllerTest.updateFound:68 Status expected:<200> but was:<403>
+[INFO] 
+[ERROR] Tests run: 26, Failures: 5, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.604 s
+[INFO] Finished at: 2026-02-11T17:09:34-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.2:test (default-test) on project services: There are test failures.
+[ERROR] 
+[ERROR] See /Users/isantospro/dev/bluetide-back/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

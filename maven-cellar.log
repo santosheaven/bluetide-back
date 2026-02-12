@@ -1,0 +1,18 @@
+/opt/homebrew/Cellar/maven:
+total 0
+drwxr-xr-x@  3 isantospro  admin    96 Feb 11 16:25 .
+drwxrwxr-x@ 62 isantospro  admin  1984 Feb 11 15:19 ..
+drwxr-xr-x@ 10 isantospro  admin   320 Feb 11 16:25 3.9.12
+
+/opt/homebrew/Cellar/maven/3.9.12:
+total 128
+drwxr-xr-x@ 10 isantospro  admin    320 Feb 11 16:25 .
+drwxr-xr-x@  3 isantospro  admin     96 Feb 11 16:25 ..
+drwxr-xr-x@  3 isantospro  admin     96 Dec 13 03:16 .brew
+-rw-r--r--@  1 isantospro  admin   6042 Feb 11 16:25 INSTALL_RECEIPT.json
+-rw-r--r--@  1 isantospro  admin   8391 Dec 13 03:16 LICENSE
+-rw-r--r--@  1 isantospro  admin   4854 Dec 13 03:16 NOTICE
+-rw-r--r--@  1 isantospro  admin   1279 Dec 13 03:16 README.txt
+drwxr-xr-x@  5 isantospro  admin    160 Feb 11 16:25 bin
+drwxr-xr-x@  6 isantospro  admin    192 Dec 13 03:16 libexec
+-rw-r--r--@  1 isantospro  admin  31329 Feb 11 16:25 sbom.spdx.json

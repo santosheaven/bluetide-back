@@ -1,0 +1,273 @@
+Using JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.bluetide:services >------------------------
+[INFO] Building services 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ services ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ services ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ services ---
+[INFO] skip non existing resourceDirectory /Users/isantospro/dev/bluetide-back/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ services ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ services ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.bluetide.services.controller.UserControllerTest
+17:10:31.407 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.bluetide.services.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:10:31.467 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.UserControllerTest
+17:10:31.548 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:31.664-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.UserControllerTest      : Starting UserControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:31.664-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/isantospro/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-02-11T17:10:32.636-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:32.636-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:32.637-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-02-11T17:10:32.648-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.UserControllerTest      : Started UserControllerTest in 1.104 seconds (process running for 1.532)
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.413 s -- in com.bluetide.services.controller.UserControllerTest
+[INFO] Running com.bluetide.services.controller.InventoryControllerTest
+2026-02-11T17:10:32.760-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.InventoryControllerTest]: InventoryControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:32.764-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.InventoryControllerTest
+2026-02-11T17:10:32.766-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:32.776-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.InventoryControllerTest          : Starting InventoryControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:32.776-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.InventoryControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:32.913-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:32.913-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:32.913-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:10:32.916-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.InventoryControllerTest          : Started InventoryControllerTest in 0.15 seconds (process running for 1.801)
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.183 s -- in com.bluetide.services.controller.InventoryControllerTest
+[INFO] Running com.bluetide.services.controller.NotificationControllerTest
+2026-02-11T17:10:32.944-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.NotificationControllerTest]: NotificationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:32.947-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.NotificationControllerTest
+2026-02-11T17:10:32.948-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:32.955-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.NotificationControllerTest       : Starting NotificationControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:32.955-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.NotificationControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.058-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:33.059-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:33.059-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:10:33.062-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.NotificationControllerTest       : Started NotificationControllerTest in 0.114 seconds (process running for 1.947)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.138 s -- in com.bluetide.services.controller.NotificationControllerTest
+[INFO] Running com.bluetide.services.controller.InvoiceControllerTest
+2026-02-11T17:10:33.083-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.InvoiceControllerTest]: InvoiceControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:33.085-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.InvoiceControllerTest
+2026-02-11T17:10:33.086-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:33.093-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.InvoiceControllerTest   : Starting InvoiceControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:33.093-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.InvoiceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.190-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:33.190-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:33.190-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:10:33.192-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.InvoiceControllerTest   : Started InvoiceControllerTest in 0.106 seconds (process running for 2.077)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.130 s -- in com.bluetide.services.controller.InvoiceControllerTest
+[INFO] Running com.bluetide.services.controller.PropertyControllerTest
+2026-02-11T17:10:33.214-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.PropertyControllerTest]: PropertyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:33.216-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.PropertyControllerTest
+2026-02-11T17:10:33.217-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:33.222-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.PropertyControllerTest  : Starting PropertyControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:33.223-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.PropertyControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.310-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:33.310-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:33.311-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-02-11T17:10:33.312-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.PropertyControllerTest  : Started PropertyControllerTest in 0.095 seconds (process running for 2.197)
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.120 s -- in com.bluetide.services.controller.PropertyControllerTest
+[INFO] Running com.bluetide.services.controller.ServiceRequestControllerTest
+2026-02-11T17:10:33.335-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.ServiceRequestControllerTest]: ServiceRequestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:33.337-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.ServiceRequestControllerTest
+2026-02-11T17:10:33.338-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:33.342-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.ServiceRequestControllerTest     : Starting ServiceRequestControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:33.342-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.ServiceRequestControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.422-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:33.422-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:33.423-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-02-11T17:10:33.424-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.ServiceRequestControllerTest     : Started ServiceRequestControllerTest in 0.087 seconds (process running for 2.309)
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s -- in com.bluetide.services.controller.ServiceRequestControllerTest
+[INFO] Running com.bluetide.services.controller.MaintenanceControllerTest
+2026-02-11T17:10:33.441-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.MaintenanceControllerTest]: MaintenanceControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:33.443-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.MaintenanceControllerTest
+2026-02-11T17:10:33.444-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:33.449-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.MaintenanceControllerTest        : Starting MaintenanceControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:33.450-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.MaintenanceControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.533-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:33.533-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:33.533-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:10:33.535-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.c.MaintenanceControllerTest        : Started MaintenanceControllerTest in 0.091 seconds (process running for 2.419)
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in com.bluetide.services.controller.MaintenanceControllerTest
+[INFO] Running com.bluetide.services.controller.CompanyControllerTest
+2026-02-11T17:10:33.552-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.controller.CompanyControllerTest]: CompanyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:33.554-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.controller.CompanyControllerTest
+2026-02-11T17:10:33.555-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:33.560-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.CompanyControllerTest   : Starting CompanyControllerTest using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:33.561-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.CompanyControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.637-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-11T17:10:33.637-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-11T17:10:33.637-06:00  INFO 60216 --- [bluetide] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-11T17:10:33.639-06:00  INFO 60216 --- [bluetide] [           main] c.b.s.controller.CompanyControllerTest   : Started CompanyControllerTest in 0.084 seconds (process running for 2.523)
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s -- in com.bluetide.services.controller.CompanyControllerTest
+[INFO] Running com.bluetide.services.ServicesApplicationTests
+2026-02-11T17:10:33.656-06:00  INFO 60216 --- [bluetide] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bluetide.services.ServicesApplicationTests]: ServicesApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-11T17:10:33.658-06:00  INFO 60216 --- [bluetide] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bluetide.services.ServicesApplication for test class com.bluetide.services.ServicesApplicationTests
+2026-02-11T17:10:33.660-06:00  INFO 60216 --- [bluetide] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-11T17:10:33.665-06:00  INFO 60216 --- [bluetide] [           main] c.b.services.ServicesApplicationTests    : Starting ServicesApplicationTests using Java 21.0.10 with PID 60216 (started by isantospro in /Users/isantospro/dev/bluetide-back)
+2026-02-11T17:10:33.665-06:00  INFO 60216 --- [bluetide] [           main] c.b.services.ServicesApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-02-11T17:10:33.756-06:00  INFO 60216 --- [bluetide] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-02-11T17:10:33.777-06:00  INFO 60216 --- [bluetide] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 8 MongoDB repository interfaces.
+2026-02-11T17:10:33.899-06:00  INFO 60216 --- [bluetide] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "26.2"}, "platform": "Java/Homebrew/21.0.10"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@1fd0f9dd, com.mongodb.Jep395RecordCodecProvider@f80a0ad, com.mongodb.KotlinCodecProvider@2655ad3b]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-02-11T17:10:33.914-06:00  INFO 60216 --- [bluetide] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.2.1.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 3 common frames omitted
+
+2026-02-11T17:10:34.060-06:00  INFO 60216 --- [bluetide] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-11T17:10:34.060-06:00  WARN 60216 --- [bluetide] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-11T17:10:34.304-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2026-02-11T17:10:34.308-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-02-11T17:10:34.309-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2026-02-11T17:10:34.309-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2026-02-11T17:10:34.309-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-02-11T17:10:34.309-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-02-11T17:10:34.309-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2026-02-11T17:10:34.309-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@495cae6c
+2026-02-11T17:10:34.317-06:00  INFO 60216 --- [bluetide] [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2026-02-11T17:10:34.317-06:00  INFO 60216 --- [bluetide] [           main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-02-11T17:10:34.318-06:00  INFO 60216 --- [bluetide] [           main] c.b.services.ServicesApplicationTests    : Started ServicesApplicationTests in 0.658 seconds (process running for 3.203)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.665 s -- in com.bluetide.services.ServicesApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 54, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.075 s
+[INFO] Finished at: 2026-02-11T17:10:34-06:00
+[INFO] ------------------------------------------------------------------------

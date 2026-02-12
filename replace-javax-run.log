@@ -1,0 +1,6 @@
+Repo root: /Users/isantospro/dev/bluetide-back
+Scanning /Users/isantospro/dev/bluetide-back/src/test/java for 'javax.' occurrences...
+No matches in /Users/isantospro/dev/bluetide-back/src/test/java
+Scanning /Users/isantospro/dev/bluetide-back/src/main/resources for 'javax.' occurrences...
+No matches in /Users/isantospro/dev/bluetide-back/src/main/resources
+No javax.* occurrences were replaced.

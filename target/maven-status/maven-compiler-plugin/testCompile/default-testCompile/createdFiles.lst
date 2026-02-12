@@ -1,0 +1,9 @@
+com/bluetide/services/controller/CompanyControllerTest.class
+com/bluetide/services/controller/MaintenanceControllerTest.class
+com/bluetide/services/controller/PropertyControllerTest.class
+com/bluetide/services/controller/InventoryControllerTest.class
+com/bluetide/services/controller/ServiceRequestControllerTest.class
+com/bluetide/services/controller/UserControllerTest.class
+com/bluetide/services/ServicesApplicationTests.class
+com/bluetide/services/controller/InvoiceControllerTest.class
+com/bluetide/services/controller/NotificationControllerTest.class
