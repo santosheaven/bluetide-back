@@ -1,0 +1,339 @@
+# BlueTide REST requests (VSCode REST Client format)
+
+@base = http://localhost:8080
+@userId = user-id-1
+@companyId = company-id-1
+@propertyId = property-id-1
+@inventoryId = inventory-id-1
+@maintenanceId = maintenance-id-1
+@serviceId = service-id-1
+@invoiceId = invoice-id-1
+@notificationId = notification-id-1
+
+### Public: Health
+GET {{base}}/api/public/health
+
+### Public: Info
+GET {{base}}/api/public/info
+
+### Auth: Register
+POST {{base}}/api/auth/register
+Content-Type: application/json
+
+{
+  "displayName": "Alice Owner",
+  "email": "alice@example.com",
+  "password": "secret123",
+  "role": "OWNER"
+}
+
+### Auth: Login
+POST {{base}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "alice@example.com",
+  "password": "secret123"
+}
+
+### Auth: Refresh
+POST {{base}}/api/auth/refresh
+Content-Type: application/json
+
+{ "refreshToken": "<REFRESH_TOKEN>" }
+
+### Auth: Me (requires token)
+GET {{base}}/api/auth/me
+Authorization: Bearer <JWT>
+
+### Auth: Change password (requires token)
+POST {{base}}/api/auth/change-password
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "currentPassword": "secret123",
+  "newPassword": "newSecret456"
+}
+
+### Users: list
+GET {{base}}/api/users
+Authorization: Bearer <JWT>
+
+### Users: get by id
+GET {{base}}/api/users/{{userId}}
+Authorization: Bearer <JWT>
+
+### Users: create
+POST {{base}}/api/users
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "email": "bob@example.com",
+  "password": "pwd12345",
+  "displayName": "Bob",
+  "role": "MANAGER"
+}
+
+### Users: update
+PUT {{base}}/api/users/{{userId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "email": "bob2@example.com",
+  "displayName": "Bob Updated",
+  "role": "MANAGER"
+}
+
+### Users: delete
+DELETE {{base}}/api/users/{{userId}}
+Authorization: Bearer <JWT>
+
+### Companies: list
+GET {{base}}/api/companies
+Authorization: Bearer <JWT>
+
+### Companies: get
+GET {{base}}/api/companies/{{companyId}}
+Authorization: Bearer <JWT>
+
+### Companies: create
+POST {{base}}/api/companies
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "name": "Acme Property Management",
+  "managerIds": ["user1","user2"]
+}
+
+### Companies: update
+PUT {{base}}/api/companies/{{companyId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "name": "Acme PM Updated",
+  "managerIds": ["user1"]
+}
+
+### Companies: delete
+DELETE {{base}}/api/companies/{{companyId}}
+Authorization: Bearer <JWT>
+
+### Properties: list
+GET {{base}}/api/properties
+Authorization: Bearer <JWT>
+
+### Properties: get
+GET {{base}}/api/properties/{{propertyId}}
+Authorization: Bearer <JWT>
+
+### Properties: create
+POST {{base}}/api/properties
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "address": "123 Main St, Springfield",
+  "type": "APARTMENT",
+  "environments": 3,
+  "floors": 1,
+  "hasPool": false,
+  "parkingSpots": 1
+}
+
+### Properties: update
+PUT {{base}}/api/properties/{{propertyId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "address": "123 Main St, Springfield - Apt 2",
+  "type": "APARTMENT",
+  "environments": 4
+}
+
+### Properties: delete
+DELETE {{base}}/api/properties/{{propertyId}}
+Authorization: Bearer <JWT>
+
+### Inventory: list
+GET {{base}}/api/inventory
+Authorization: Bearer <JWT>
+
+### Inventory: get
+GET {{base}}/api/inventory/{{inventoryId}}
+Authorization: Bearer <JWT>
+
+### Inventory: create
+POST {{base}}/api/inventory
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "propertyId": "{{propertyId}}",
+  "name": "Fridge",
+  "brand": "CoolCo",
+  "model": "X100",
+  "state": "FUNCTIONAL"
+}
+
+### Inventory: update
+PUT {{base}}/api/inventory/{{inventoryId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "propertyId": "{{propertyId}}",
+  "name": "Fridge",
+  "brand": "CoolCo Updated",
+  "state": "REPAIRED"
+}
+
+### Inventory: delete
+DELETE {{base}}/api/inventory/{{inventoryId}}
+Authorization: Bearer <JWT>
+
+### Maintenance: list
+GET {{base}}/api/maintenance
+Authorization: Bearer <JWT>
+
+### Maintenance: get
+GET {{base}}/api/maintenance/{{maintenanceId}}
+Authorization: Bearer <JWT>
+
+### Maintenance: create
+POST {{base}}/api/maintenance
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "inventoryId": "{{inventoryId}}",
+  "date": "2026-02-10T09:00:00Z",
+  "description": "Quarterly filter replacement",
+  "frequency": "QUARTERLY",
+  "isCompleted": false
+}
+
+### Maintenance: update
+PUT {{base}}/api/maintenance/{{maintenanceId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "inventoryId": "{{inventoryId}}",
+  "date": "2026-02-11T09:00:00Z",
+  "description": "Filter replaced",
+  "isCompleted": true
+}
+
+### Maintenance: delete
+DELETE {{base}}/api/maintenance/{{maintenanceId}}
+Authorization: Bearer <JWT>
+
+### Services: list
+GET {{base}}/api/services
+Authorization: Bearer <JWT>
+
+### Services: get
+GET {{base}}/api/services/{{serviceId}}
+Authorization: Bearer <JWT>
+
+### Services: create
+POST {{base}}/api/services
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "propertyId": "{{propertyId}}",
+  "requesterId": "{{userId}}",
+  "serviceType": "PLUMBING",
+  "description": "Leaky faucet in kitchen",
+  "status": "OPEN"
+}
+
+### Services: update
+PUT {{base}}/api/services/{{serviceId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "propertyId": "{{propertyId}}",
+  "requesterId": "{{userId}}",
+  "serviceType": "PLUMBING",
+  "description": "Leaky faucet fixed",
+  "status": "DONE"
+}
+
+### Services: delete
+DELETE {{base}}/api/services/{{serviceId}}
+Authorization: Bearer <JWT>
+
+### Invoices: list
+GET {{base}}/api/invoices
+Authorization: Bearer <JWT>
+
+### Invoices: get
+GET {{base}}/api/invoices/{{invoiceId}}
+Authorization: Bearer <JWT>
+
+### Invoices: create
+POST {{base}}/api/invoices
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "propertyId": "{{propertyId}}",
+  "relatedEntityId": "{{serviceId}}",
+  "serviceType": "PLUMBING",
+  "amount": 125.5
+}
+
+### Invoices: update
+PUT {{base}}/api/invoices/{{invoiceId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "amount": 150.0
+}
+
+### Invoices: delete
+DELETE {{base}}/api/invoices/{{invoiceId}}
+Authorization: Bearer <JWT>
+
+### Notifications: list
+GET {{base}}/api/notifications
+Authorization: Bearer <JWT>
+
+### Notifications: get
+GET {{base}}/api/notifications/{{notificationId}}
+Authorization: Bearer <JWT>
+
+### Notifications: create
+POST {{base}}/api/notifications
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "userId": "{{userId}}",
+  "type": "SERVICE_UPDATE",
+  "message": "Your service request has been scheduled",
+  "read": false
+}
+
+### Notifications: update
+PUT {{base}}/api/notifications/{{notificationId}}
+Content-Type: application/json
+Authorization: Bearer <JWT>
+
+{
+  "read": true
+}
+
+### Notifications: delete
+DELETE {{base}}/api/notifications/{{notificationId}}
+Authorization: Bearer <JWT>
