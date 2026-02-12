@@ -1,6 +1,11 @@
 package com.bluetide.services.controller;
+
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+
 import com.bluetide.services.models.Inventory;
 import com.bluetide.services.repository.InventoryRepository;
+import com.bluetide.services.security.JwtAuthenticationFilter;
+import com.bluetide.services.security.JwtUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -17,9 +22,20 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(InventoryController.class)
+@AutoConfigureMockMvc(addFilters = false)
 public class InventoryControllerTest {
-    @Autowired private MockMvc mvc;
-    @MockBean private InventoryRepository repo;
+    @Autowired
+    private MockMvc mvc;
+
+    @MockBean
+    private InventoryRepository repo;
+
+    @MockBean
+    private JwtUtils jwtUtils;
+
+    @MockBean
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
+
     private final ObjectMapper mapper = new ObjectMapper();
 
     @Test

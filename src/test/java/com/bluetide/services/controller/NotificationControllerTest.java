@@ -2,28 +2,36 @@ package com.bluetide.services.controller;
 
 import com.bluetide.services.models.Notification;
 import com.bluetide.services.repository.NotificationRepository;
+import com.bluetide.services.security.JwtAuthenticationFilter;
+import com.bluetide.services.security.JwtUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-//import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.Date;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-//@WebMvcTest(NotificationController.class)
+@WebMvcTest(NotificationController.class)
+@AutoConfigureMockMvc(addFilters = false)
 public class NotificationControllerTest {
-    //@Autowired
+    @Autowired
     private MockMvc mvc;
-    //@MockBean
+    @MockBean
     private NotificationRepository repo;
+    @MockBean
+    private JwtUtils jwtUtils;
+    @MockBean
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
     private final ObjectMapper mapper = new ObjectMapper();
 
     @Test
