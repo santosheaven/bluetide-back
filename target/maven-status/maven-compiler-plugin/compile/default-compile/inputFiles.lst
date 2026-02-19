@@ -1,7 +1,10 @@
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/ServicesApplication.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/CorsConfig.java
+/Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/I18nConfig.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/JacksonConfig.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/MongoConfig.java
+/Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/OpenApiConfig.java
+/Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/QuartzConfig.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/RestTemplateConfig.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/config/SecurityConfig.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/controller/AuthController.java
@@ -45,6 +48,8 @@
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/exception/ResourceAlreadyExistsException.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/exception/ResourceNotFoundException.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/exception/UnauthorizedException.java
+/Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/job/MaintenanceReminderJob.java
+/Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/job/UnpaidInvoiceReminderJob.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/models/Company.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/models/Inventory.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/models/Invoice.java
@@ -67,6 +72,7 @@
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/security/SecurityUtils.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/service/AuthService.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/service/CompanyService.java
+/Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/service/EmailService.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/service/InventoryService.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/service/InvoiceService.java
 /Users/isantospro/dev/bluetide-back/src/main/java/com/bluetide/services/service/MaintenanceService.java

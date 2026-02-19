@@ -1,8 +1,11 @@
 package com.bluetide.services.service;
 
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.exception.ResourceNotFoundException;
 import com.bluetide.services.models.Property;
 import com.bluetide.services.repository.PropertyRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -20,6 +23,19 @@ public class PropertyService {
 
     public List<Property> findAll() {
         return propertyRepository.findAll();
+    }
+
+    public PageResponse<Property> findAllPaged(int page, int size) {
+        Page<Property> result = propertyRepository.findAll(PageRequest.of(page, size));
+        return PageResponse.<Property>builder()
+                .content(result.getContent())
+                .page(result.getNumber())
+                .size(result.getSize())
+                .totalElements(result.getTotalElements())
+                .totalPages(result.getTotalPages())
+                .first(result.isFirst())
+                .last(result.isLast())
+                .build();
     }
 
     public Optional<Property> findById(String id) {

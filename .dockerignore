@@ -1,0 +1,14 @@
+*.log
+.git
+.gitignore
+.idea
+*.iml
+docs/
+src/test/
+target/
+*.md
+*.txt
+*.cmd
+Dockerfile
+.dockerignore
+

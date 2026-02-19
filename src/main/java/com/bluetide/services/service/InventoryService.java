@@ -1,8 +1,11 @@
 package com.bluetide.services.service;
 
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.exception.ResourceNotFoundException;
 import com.bluetide.services.models.Inventory;
 import com.bluetide.services.repository.InventoryRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +22,19 @@ public class InventoryService {
 
     public List<Inventory> findAll() {
         return inventoryRepository.findAll();
+    }
+
+    public PageResponse<Inventory> findAllPaged(int page, int size) {
+        Page<Inventory> result = inventoryRepository.findAll(PageRequest.of(page, size));
+        return PageResponse.<Inventory>builder()
+                .content(result.getContent())
+                .page(result.getNumber())
+                .size(result.getSize())
+                .totalElements(result.getTotalElements())
+                .totalPages(result.getTotalPages())
+                .first(result.isFirst())
+                .last(result.isLast())
+                .build();
     }
 
     public Optional<Inventory> findById(String id) {

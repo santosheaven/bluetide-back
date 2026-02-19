@@ -1,40 +1,74 @@
 package com.bluetide.services.controller;
 
+import com.bluetide.services.dto.ApiResponse;
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.models.Invoice;
-import com.bluetide.services.repository.InvoiceRepository;
+import com.bluetide.services.service.InvoiceService;
+import jakarta.validation.Valid;
+import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+import java.util.Locale;
 
 @RestController
 @RequestMapping("/api/invoices")
 public class InvoiceController {
-    private final InvoiceRepository repo;
-    public InvoiceController(InvoiceRepository repo) { this.repo = repo; }
+
+    private final InvoiceService invoiceService;
+    private final MessageSource messageSource;
+
+    public InvoiceController(InvoiceService invoiceService, MessageSource messageSource) {
+        this.invoiceService = invoiceService;
+        this.messageSource = messageSource;
+    }
+
+    private String msg(String key, Locale locale) {
+        return messageSource.getMessage(key, null, locale);
+    }
 
     @GetMapping
-    public List<Invoice> all() { return repo.findAll(); }
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<List<Invoice>>> all(Locale locale) {
+        return ResponseEntity.ok(ApiResponse.success(invoiceService.findAll(), msg("invoice.retrieved.plural", locale)));
+    }
+
+    @GetMapping(params = {"page", "size"})
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<PageResponse<Invoice>>> allPaged(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size, Locale locale) {
+        return ResponseEntity.ok(ApiResponse.success(invoiceService.findAllPaged(page, size), msg("invoice.retrieved.plural", locale)));
+    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Invoice> get(@PathVariable String id) {
-        return repo.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<Invoice>> get(@PathVariable String id, Locale locale) {
+        return ResponseEntity.ok(ApiResponse.success(invoiceService.getById(id), msg("invoice.retrieved", locale)));
     }
 
     @PostMapping
-    public Invoice create(@RequestBody Invoice invoice) { return repo.save(invoice); }
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseEntity<ApiResponse<Invoice>> create(@Valid @RequestBody Invoice invoice, Locale locale) {
+        Invoice created = invoiceService.create(invoice);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(ApiResponse.success(created, msg("invoice.created", locale)));
+    }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Invoice> update(@PathVariable String id, @RequestBody Invoice invoice) {
-        return repo.findById(id).map(existing -> {
-            invoice.setId(id);
-            return ResponseEntity.ok(repo.save(invoice));
-        }).orElse(ResponseEntity.notFound().build());
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseEntity<ApiResponse<Invoice>> update(@PathVariable String id, @Valid @RequestBody Invoice invoice, Locale locale) {
+        Invoice updated = invoiceService.update(id, invoice);
+        return ResponseEntity.ok(ApiResponse.success(updated, msg("invoice.updated", locale)));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable String id) {
-        if (!repo.existsById(id)) return ResponseEntity.notFound().build();
-        repo.deleteById(id);
-        return ResponseEntity.noContent().build();
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<ApiResponse<Void>> delete(@PathVariable String id, Locale locale) {
+        invoiceService.delete(id);
+        return ResponseEntity.ok(ApiResponse.success(null, msg("invoice.deleted", locale)));
     }
 }

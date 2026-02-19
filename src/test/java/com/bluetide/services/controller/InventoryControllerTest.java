@@ -1,22 +1,22 @@
 package com.bluetide.services.controller;
 
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-
 import com.bluetide.services.models.Inventory;
-import com.bluetide.services.repository.InventoryRepository;
+import com.bluetide.services.service.InventoryService;
+import com.bluetide.services.exception.ResourceNotFoundException;
 import com.bluetide.services.security.JwtAuthenticationFilter;
 import com.bluetide.services.security.JwtUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -24,80 +24,79 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(InventoryController.class)
 @AutoConfigureMockMvc(addFilters = false)
 public class InventoryControllerTest {
-    @Autowired
-    private MockMvc mvc;
-
-    @MockBean
-    private InventoryRepository repo;
-
-    @MockBean
-    private JwtUtils jwtUtils;
-
-    @MockBean
-    private JwtAuthenticationFilter jwtAuthenticationFilter;
-
+    @Autowired private MockMvc mvc;
+    @MockBean private InventoryService inventoryService;
+    @MockBean private JwtUtils jwtUtils;
+    @MockBean private JwtAuthenticationFilter jwtAuthenticationFilter;
     private final ObjectMapper mapper = new ObjectMapper();
 
     @Test
     void getAll() throws Exception {
         Inventory i = new Inventory(); i.setId("i1"); i.setName("Fridge");
-        when(repo.findAll()).thenReturn(List.of(i));
-        mvc.perform(get("/api/inventory")).andExpect(status().isOk())
-                .andExpect(content().json(mapper.writeValueAsString(List.of(i))));
+        when(inventoryService.findAll()).thenReturn(List.of(i));
+        mvc.perform(get("/api/inventory"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.success").value(true))
+                .andExpect(jsonPath("$.data[0].id").value("i1"));
     }
 
     @Test
     void getByIdFound() throws Exception {
         Inventory i = new Inventory(); i.setId("i1"); i.setName("Fridge");
-        when(repo.findById("i1")).thenReturn(Optional.of(i));
-        mvc.perform(get("/api/inventory/i1")).andExpect(status().isOk())
-                .andExpect(content().json(mapper.writeValueAsString(i)));
+        when(inventoryService.getById("i1")).thenReturn(i);
+        mvc.perform(get("/api/inventory/i1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.success").value(true))
+                .andExpect(jsonPath("$.data.id").value("i1"));
     }
 
     @Test
     void getByIdNotFound() throws Exception {
-        when(repo.findById("i1")).thenReturn(Optional.empty());
+        when(inventoryService.getById("i1")).thenThrow(new ResourceNotFoundException("Inventory", "id", "i1"));
         mvc.perform(get("/api/inventory/i1")).andExpect(status().isNotFound());
     }
 
     @Test
     void create() throws Exception {
-        Inventory i = new Inventory(); i.setName("New");
-        Inventory saved = new Inventory(); saved.setId("i2"); saved.setName("New");
-        when(repo.save(any(Inventory.class))).thenReturn(saved);
+        Inventory i = new Inventory(); i.setName("New"); i.setPropertyId("p1");
+        Inventory saved = new Inventory(); saved.setId("i2"); saved.setName("New"); saved.setPropertyId("p1");
+        when(inventoryService.create(any(Inventory.class))).thenReturn(saved);
         mvc.perform(post("/api/inventory").contentType("application/json").content(mapper.writeValueAsString(i)))
-                .andExpect(status().isOk())
-                .andExpect(content().json(mapper.writeValueAsString(saved)));
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.success").value(true))
+                .andExpect(jsonPath("$.data.id").value("i2"));
     }
 
     @Test
     void updateFound() throws Exception {
-        Inventory existing = new Inventory(); existing.setId("i1");
-        Inventory updated = new Inventory(); updated.setId("i1"); updated.setName("U");
-        when(repo.findById("i1")).thenReturn(Optional.of(existing));
-        when(repo.save(any(Inventory.class))).thenReturn(updated);
+        Inventory updated = new Inventory(); updated.setId("i1"); updated.setName("U"); updated.setPropertyId("p1");
+        when(inventoryService.update(eq("i1"), any(Inventory.class))).thenReturn(updated);
         mvc.perform(put("/api/inventory/i1").contentType("application/json").content(mapper.writeValueAsString(updated)))
                 .andExpect(status().isOk())
-                .andExpect(content().json(mapper.writeValueAsString(updated)));
+                .andExpect(jsonPath("$.success").value(true))
+                .andExpect(jsonPath("$.data.name").value("U"));
     }
 
     @Test
     void updateNotFound() throws Exception {
-        when(repo.findById("i1")).thenReturn(Optional.empty());
-        mvc.perform(put("/api/inventory/i1").contentType("application/json").content("{}"))
+        when(inventoryService.update(eq("i1"), any(Inventory.class)))
+                .thenThrow(new ResourceNotFoundException("Inventory", "id", "i1"));
+        Inventory body = new Inventory(); body.setName("X"); body.setPropertyId("p1");
+        mvc.perform(put("/api/inventory/i1").contentType("application/json").content(mapper.writeValueAsString(body)))
                 .andExpect(status().isNotFound());
     }
 
     @Test
     void deleteFound() throws Exception {
-        when(repo.existsById("i1")).thenReturn(true);
-        doNothing().when(repo).deleteById("i1");
-        mvc.perform(delete("/api/inventory/i1")).andExpect(status().isNoContent());
+        doNothing().when(inventoryService).delete("i1");
+        mvc.perform(delete("/api/inventory/i1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.success").value(true));
     }
 
     @Test
     void deleteNotFound() throws Exception {
-        when(repo.existsById("i1")).thenReturn(false);
+        doThrow(new ResourceNotFoundException("Inventory", "id", "i1")).when(inventoryService).delete("i1");
         mvc.perform(delete("/api/inventory/i1")).andExpect(status().isNotFound());
     }
 }
