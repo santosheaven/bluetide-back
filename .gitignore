@@ -1,0 +1,57 @@
+# ============================================================
+# BlueTide Backend — .gitignore
+# ============================================================
+
+# --- Build ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# --- IDE ---
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+
+### VS Code ###
+.vscode/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Environment ---
+.env
+.env.local
+.env.*.local
+
+# --- Logs ---
+*.log
+
+# --- Maven ---
+.mvn/timing.properties
+
+# --- Java ---
+*.class
+*.jar
+!**/src/main/**/lib/*.jar
+
+# --- Spring ---
+application-local.properties
+
+/target/

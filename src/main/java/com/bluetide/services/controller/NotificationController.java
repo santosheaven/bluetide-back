@@ -1,40 +1,79 @@
 package com.bluetide.services.controller;
 
+import com.bluetide.services.dto.ApiResponse;
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.models.Notification;
-import com.bluetide.services.repository.NotificationRepository;
+import com.bluetide.services.service.NotificationService;
+import jakarta.validation.Valid;
+import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+import java.util.Locale;
 
 @RestController
 @RequestMapping("/api/notifications")
 public class NotificationController {
-    private final NotificationRepository repo;
-    public NotificationController(NotificationRepository repo) { this.repo = repo; }
+
+    private final NotificationService notificationService;
+    private final MessageSource messageSource;
+
+    public NotificationController(NotificationService notificationService, MessageSource messageSource) {
+        this.notificationService = notificationService;
+        this.messageSource = messageSource;
+    }
+
+    private String msg(String key, Locale locale) {
+        return messageSource.getMessage(key, null, locale);
+    }
 
     @GetMapping
-    public List<Notification> all() { return repo.findAll(); }
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<List<Notification>>> all(Locale locale) {
+        return ResponseEntity.ok(ApiResponse.success(notificationService.findAll(), msg("notification.retrieved.plural", locale)));
+    }
+
+    @GetMapping(params = {"page", "size"})
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<PageResponse<Notification>>> allPaged(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size, Locale locale) {
+        return ResponseEntity.ok(ApiResponse.success(notificationService.findAllPaged(page, size), msg("notification.retrieved.plural", locale)));
+    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Notification> get(@PathVariable String id) {
-        return repo.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<Notification>> get(@PathVariable String id, Locale locale) {
+        return ResponseEntity.ok(ApiResponse.success(notificationService.getById(id), msg("notification.retrieved", locale)));
     }
 
     @PostMapping
-    public Notification create(@RequestBody Notification notification) { return repo.save(notification); }
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseEntity<ApiResponse<Notification>> create(@Valid @RequestBody Notification notification, Locale locale) {
+        Notification created = notificationService.create(notification);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(ApiResponse.success(created, msg("notification.created", locale)));
+    }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Notification> update(@PathVariable String id, @RequestBody Notification notification) {
-        return repo.findById(id).map(existing -> {
-            notification.setId(id);
-            return ResponseEntity.ok(repo.save(notification));
-        }).orElse(ResponseEntity.notFound().build());
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER', 'OWNER', 'TENANT')")
+    public ResponseEntity<ApiResponse<Notification>> update(@PathVariable String id, @Valid @RequestBody Notification notification, Locale locale) {
+        Notification existing = notificationService.getById(id);
+        notification.setId(id);
+        if (notification.getMessage() != null) existing.setMessage(notification.getMessage());
+        if (notification.getRead() != null) existing.setRead(notification.getRead());
+        if (notification.getType() != null) existing.setType(notification.getType());
+        Notification updated = notificationService.create(existing);
+        return ResponseEntity.ok(ApiResponse.success(updated, msg("notification.updated", locale)));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable String id) {
-        if (!repo.existsById(id)) return ResponseEntity.notFound().build();
-        repo.deleteById(id);
-        return ResponseEntity.noContent().build();
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseEntity<ApiResponse<Void>> delete(@PathVariable String id, Locale locale) {
+        notificationService.delete(id);
+        return ResponseEntity.ok(ApiResponse.success(null, msg("notification.deleted", locale)));
     }
 }

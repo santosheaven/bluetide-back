@@ -1,8 +1,11 @@
 package com.bluetide.services.service;
 
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.exception.ResourceNotFoundException;
 import com.bluetide.services.models.Maintenance;
 import com.bluetide.services.repository.MaintenanceRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -20,6 +23,19 @@ public class MaintenanceService {
 
     public List<Maintenance> findAll() {
         return maintenanceRepository.findAll();
+    }
+
+    public PageResponse<Maintenance> findAllPaged(int page, int size) {
+        Page<Maintenance> result = maintenanceRepository.findAll(PageRequest.of(page, size));
+        return PageResponse.<Maintenance>builder()
+                .content(result.getContent())
+                .page(result.getNumber())
+                .size(result.getSize())
+                .totalElements(result.getTotalElements())
+                .totalPages(result.getTotalPages())
+                .first(result.isFirst())
+                .last(result.isLast())
+                .build();
     }
 
     public Optional<Maintenance> findById(String id) {

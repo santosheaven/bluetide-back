@@ -1,8 +1,11 @@
 package com.bluetide.services.service;
 
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.exception.ResourceNotFoundException;
 import com.bluetide.services.models.Notification;
 import com.bluetide.services.repository.NotificationRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -20,6 +23,19 @@ public class NotificationService {
 
     public List<Notification> findAll() {
         return notificationRepository.findAll();
+    }
+
+    public PageResponse<Notification> findAllPaged(int page, int size) {
+        Page<Notification> result = notificationRepository.findAll(PageRequest.of(page, size));
+        return PageResponse.<Notification>builder()
+                .content(result.getContent())
+                .page(result.getNumber())
+                .size(result.getSize())
+                .totalElements(result.getTotalElements())
+                .totalPages(result.getTotalPages())
+                .first(result.isFirst())
+                .last(result.isLast())
+                .build();
     }
 
     public Optional<Notification> findById(String id) {

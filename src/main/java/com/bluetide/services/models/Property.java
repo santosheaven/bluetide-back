@@ -1,5 +1,6 @@
 package com.bluetide.services.models;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,7 +11,10 @@ import java.util.Date;
 public class Property {
     @Id
     private String id;
+
+    @NotBlank(message = "{validation.property.address.required}")
     private String address;
+
     private String type;
     private Integer environments;
     private Integer floors;

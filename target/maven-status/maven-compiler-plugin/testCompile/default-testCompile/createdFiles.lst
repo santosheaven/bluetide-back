@@ -1,3 +1,4 @@
+com/bluetide/services/security/JwtUtilsRS256Test.class
 com/bluetide/services/controller/CompanyControllerTest.class
 com/bluetide/services/controller/MaintenanceControllerTest.class
 com/bluetide/services/controller/PropertyControllerTest.class

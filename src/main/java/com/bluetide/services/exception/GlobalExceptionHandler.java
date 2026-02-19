@@ -2,6 +2,7 @@ package com.bluetide.services.exception;
 
 import com.bluetide.services.dto.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -13,20 +14,30 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    private final MessageSource messageSource;
+
+    public GlobalExceptionHandler(MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
+
+    private String msg(String key, Locale locale) {
+        return messageSource.getMessage(key, null, locale);
+    }
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleResourceNotFoundException(
-            ResourceNotFoundException ex, HttpServletRequest request) {
+            ResourceNotFoundException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.NOT_FOUND.value(),
-                "Not Found",
+                msg("error.notfound", locale),
                 ex.getMessage(),
                 request.getRequestURI()
         );
@@ -35,10 +46,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceAlreadyExistsException.class)
     public ResponseEntity<ErrorResponse> handleResourceAlreadyExistsException(
-            ResourceAlreadyExistsException ex, HttpServletRequest request) {
+            ResourceAlreadyExistsException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.CONFLICT.value(),
-                "Conflict",
+                msg("error.conflict", locale),
                 ex.getMessage(),
                 request.getRequestURI()
         );
@@ -47,10 +58,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(BadRequestException.class)
     public ResponseEntity<ErrorResponse> handleBadRequestException(
-            BadRequestException ex, HttpServletRequest request) {
+            BadRequestException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.BAD_REQUEST.value(),
-                "Bad Request",
+                msg("error.badrequest", locale),
                 ex.getMessage(),
                 request.getRequestURI()
         );
@@ -59,10 +70,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(UnauthorizedException.class)
     public ResponseEntity<ErrorResponse> handleUnauthorizedException(
-            UnauthorizedException ex, HttpServletRequest request) {
+            UnauthorizedException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.UNAUTHORIZED.value(),
-                "Unauthorized",
+                msg("error.unauthorized", locale),
                 ex.getMessage(),
                 request.getRequestURI()
         );
@@ -71,10 +82,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ForbiddenException.class)
     public ResponseEntity<ErrorResponse> handleForbiddenException(
-            ForbiddenException ex, HttpServletRequest request) {
+            ForbiddenException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.FORBIDDEN.value(),
-                "Forbidden",
+                msg("error.forbidden", locale),
                 ex.getMessage(),
                 request.getRequestURI()
         );
@@ -83,11 +94,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<ErrorResponse> handleBadCredentialsException(
-            BadCredentialsException ex, HttpServletRequest request) {
+            BadCredentialsException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.UNAUTHORIZED.value(),
-                "Unauthorized",
-                "Invalid email or password",
+                msg("error.unauthorized", locale),
+                msg("auth.invalid.credentials", locale),
                 request.getRequestURI()
         );
         return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
@@ -95,10 +106,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(AuthenticationException.class)
     public ResponseEntity<ErrorResponse> handleAuthenticationException(
-            AuthenticationException ex, HttpServletRequest request) {
+            AuthenticationException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.UNAUTHORIZED.value(),
-                "Unauthorized",
+                msg("error.unauthorized", locale),
                 ex.getMessage(),
                 request.getRequestURI()
         );
@@ -107,11 +118,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<ErrorResponse> handleAccessDeniedException(
-            AccessDeniedException ex, HttpServletRequest request) {
+            AccessDeniedException ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.FORBIDDEN.value(),
-                "Forbidden",
-                "You don't have permission to access this resource",
+                msg("error.forbidden", locale),
+                msg("error.forbidden.message", locale),
                 request.getRequestURI()
         );
         return new ResponseEntity<>(error, HttpStatus.FORBIDDEN);
@@ -119,7 +130,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidationExceptions(
-            MethodArgumentNotValidException ex, HttpServletRequest request) {
+            MethodArgumentNotValidException ex, HttpServletRequest request, Locale locale) {
         Map<String, List<String>> validationErrors = ex.getBindingResult()
                 .getFieldErrors()
                 .stream()
@@ -130,8 +141,8 @@ public class GlobalExceptionHandler {
 
         ErrorResponse error = ErrorResponse.builder()
                 .status(HttpStatus.BAD_REQUEST.value())
-                .error("Validation Failed")
-                .message("Invalid input data")
+                .error(msg("error.validation", locale))
+                .message(msg("error.validation.message", locale))
                 .path(request.getRequestURI())
                 .timestamp(LocalDateTime.now())
                 .validationErrors(validationErrors)
@@ -142,14 +153,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGenericException(
-            Exception ex, HttpServletRequest request) {
+            Exception ex, HttpServletRequest request, Locale locale) {
         ErrorResponse error = ErrorResponse.of(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                "Internal Server Error",
-                "An unexpected error occurred",
+                msg("error.internal", locale),
+                msg("error.internal.message", locale),
                 request.getRequestURI()
         );
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
-

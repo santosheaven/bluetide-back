@@ -1,8 +1,11 @@
 package com.bluetide.services.service;
 
+import com.bluetide.services.dto.PageResponse;
 import com.bluetide.services.exception.ResourceNotFoundException;
 import com.bluetide.services.models.Company;
 import com.bluetide.services.repository.CompanyRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +22,19 @@ public class CompanyService {
 
     public List<Company> findAll() {
         return companyRepository.findAll();
+    }
+
+    public PageResponse<Company> findAllPaged(int page, int size) {
+        Page<Company> result = companyRepository.findAll(PageRequest.of(page, size));
+        return PageResponse.<Company>builder()
+                .content(result.getContent())
+                .page(result.getNumber())
+                .size(result.getSize())
+                .totalElements(result.getTotalElements())
+                .totalPages(result.getTotalPages())
+                .first(result.isFirst())
+                .last(result.isLast())
+                .build();
     }
 
     public Optional<Company> findById(String id) {
@@ -68,4 +84,3 @@ public class CompanyService {
         companyRepository.save(company);
     }
 }
-
